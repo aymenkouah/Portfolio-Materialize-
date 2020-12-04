@@ -1,0 +1,400 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ubuntu font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS (Materialize) -->
+    <link rel="stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Styling -->
+    <style>
+        html {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        header {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 5rem;
+            overflow: hidden;
+        }   
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #nav-bar a{
+            font-size: 1.5rem;
+        }
+        #carousel {
+            height: 100vh;
+        }
+        #carousel img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        #header-button > #header-btn-trigger{
+            transform: rotate(0deg);
+            transition: all 0.1s ;
+        }
+        #header-button:hover > #header-btn-trigger{
+            transform: rotate(-45deg);
+            transition: all 0.5s ;
+        }
+        .social-phone {
+            transform: translateX(0);
+            transition: transform 0.5s;
+        }
+        .social-phone:hover {
+            transform: translateX(20px);
+            transition: all 0.5s;
+        }
+        #mail-phone {
+            color: #d32f2f;
+            
+        }
+        #mail-phone i {
+            color: #d32f2f;
+            transition: all 0.5s;
+        }
+        #facebook-phone {
+            color: #1565c0;
+            
+        }
+        #facebook-phone i {
+            color: #1565c0;
+            transition: all 0.5s;
+        }
+        #website-phone {
+            color: #ff5252;
+        }
+        #website-phone i {
+            color: #ff5252;
+            transition: all 0.5s;
+        }
+        #carousel-photography .carousel-item{
+            width: 500px !important;
+        }
+        .row {
+            margin-bottom: 5rem;
+        }
+        #carousel-motion .carousel-item{
+            width: 500px !important;
+        }
+        .parallax-container {
+            height: 50vh;
+            margin-bottom: 5rem;
+        }
+        .parallax-container img {
+            height: 80vh !important;
+        }
+        #skills ul li {
+            margin-left: 1rem;
+            line-height: 2;
+        }
+        #photography p, #motion p {
+            font-size: 1rem;
+            padding: 2rem;
+
+        }
+        .tabs {
+            margin-bottom: 0rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            margin-left: 1rem;
+        }
+        #download-work {
+            padding: 3rem;
+        }
+        #download-button {
+            margin-top: 2rem;
+        }
+        form {
+            margin-top: 3rem;
+        }
+        footer ul {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        footer ul li {
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 800px) and (min-height: 500px) {
+            header {
+            height: 50vh;
+            }
+            #carousel {
+                height: 50vh;
+            }
+            #header-button > #header-btn-trigger{
+                display: none;
+            }
+            #carousel-photography, #carousel-motion {
+                transform: translateY(-5rem);
+            }
+            #carousel-photography .carousel-item{
+            width: 400px !important;
+            }
+            .row {
+                margin-bottom: 0rem;
+            }
+            #carousel-motion .carousel-item{
+                width: 400px !important;
+            }
+            .parallax-container {
+                height: 30vh;
+                margin-bottom: 2rem;
+            }
+            #download-work {
+                padding: 2rem;
+            }
+            form {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 300px) {
+            h2 {
+            font-size: 3rem;
+        }
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+
+        
+
+
+
+
+
+    </style>
+    
+    <title>Materialize Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="fixed-action-btn" id="header-button">
+            <a class="btn-floating btn-large transparent" id="header-btn-trigger">
+                <i class="material-icons">near_me</i>
+            </a>
+            <ul>
+                <li><a target="_blank" class="btn-floating red darken-2 tooltipped" data-position="left" data-tooltip="Mail" href="mailto:jm_kouah@esi.dz"><i class="fab fa-google"></i></a></li>
+                <li><a target="_blank" class="btn-floating blue darken-3 tooltipped" data-position="left" data-tooltip="Facebook" href="https://www.facebook.com/intmoha8"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" class="btn-floating red accent-2 tooltipped" data-position="left" data-tooltip="Personal Website" href="https://kouah-mohammed-aymen-portfolio.netlify.app/"><i class="fas fa-window-maximize"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="carousel carousel-slider s12 " id="carousel">
+                <a class="carousel-item" href="#one!"><img class="c1 carousel-img" src="./Assets/Images/Caroussel Images/01.jpg"></a>
+                <a class="carousel-item" href="#two!"><img class="c1 carousel-img" src="./Assets/Images/Caroussel Images/02.jpg"></a>
+                <a class="carousel-item" href="#three!"><img class="c1 carousel-img" src="./Assets/Images/Caroussel Images/03.jpg"></a>
+                <a class="carousel-item" href="#four!"><img class="c1 carousel-img" src="./Assets/Images/Caroussel Images/04.jpg"></a>
+            </div>
+    
+        </div>
+
+        <nav class="transparent">
+            <div class="container">
+                <div class="nav-wrapper">
+                        <a href="./index.html" class="brand-logo" id="logo">KouahAymen</a>
+                        <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down" id="nav-bar">
+                            <li><a href="#collection">Collection</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-menu">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="./Assets/Images/Background.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="./Assets/Images/MyPic.jpg"></a>
+                    <a href="#name"><span class="white-text name">Kouah Mohammed Aymen</span></a>
+                    <a href="#email"><span class="white-text email">jm-kouah@esi.dz</span></a>
+                    <a href="#tel"><span class="white-text phone">(213) 541073018</span></a>
+                </div>
+            </li>
+            <li></li><a class="subheader">Go to</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li></li><a class="subheader">Social</a></li>
+            <li><a target="_blank" href="mailto:jm_kouah@esi.dz" id="mail-phone" class="social-phone"><i class="fab fa-google"></i>Mail</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/intmoha8" id="facebook-phone" class="social-phone"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a target="_blank" href="https://kouah-mohammed-aymen-portfolio.netlify.app/" id="website-phone" class="social-phone"><i class="fas fa-window-maximize"> </i>Personal Website</a></li>
+        </ul>
+    </header>
+
+    <section class="container scrollspy" id="collection">
+        <div class="row">
+            <div class="">
+                <h2 class="indigo-text">Photography</h2>
+                <p class="">Instead of using a big expensive camera, I prefer smaller mobile phones as they shift the focus of the shot from the quality of the picture to the meaning behind it.</p>
+            </div>
+            <div class="carousel" id="carousel-photography">
+                <a href="#one" class="carousel-item" ><img src="./Assets/Images/Collection/Photography/photography0.jpg" class=" carousel-img" width="100%"></a>
+                <a href="#two" class="carousel-item"><img src="./Assets/Images/Collection/Photography/photography1.jpg" class=" carousel-img" width="100%"></a>
+                <a href="#three" class="carousel-item"><img src="./Assets/Images/Collection/Photography/photography2.jpg" class=" carousel-img" width="100%"></a>
+                <a href="#four" class="carousel-item"><img src="./Assets/Images/Collection/Photography/photography3.jpg" class=" carousel-img" width="100%"></a>
+                <a href="#five" class="carousel-item"><img src="./Assets/Images/Collection/Photography/photography4.jpg" class=" carousel-img" width="100%"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="">
+                <h2 class="indigo-text right">Motion</h2>
+                <p class="right">I enjoy using After Effects And Illustrator to bring life to new creatures living within their own world unaware of what's going on outside the bubble they are living within</p>
+            </div>
+            <div class="carousel" id="carousel-motion">
+                <a target="_blank" href="https://www.youtube.com/watch?v=e--DYJHxShY" class="carousel-item" ><img src="./Assets/Images/Collection/Motion/motion0.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=f-Nnkb24v8U&t=2s" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion1.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=VGbf4KtvH6A" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion2.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=4dO99le0_N8" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion3.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=fhRXfk0TTUo&t=1s" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion4.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=EoCrE6ElpDU" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion5.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=s51DHVCjdIE" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion6.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://www.youtube.com/watch?v=uZCTCfxb-kQ" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion7.jpg" class="carousel-img"></a>
+                <a target="_blank" href="https://youtu.be/RjCmSFTUYtY" class="carousel-item"><img src="./Assets/Images/Collection/Motion/motion8.jpg" class="carousel-img"></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="./Assets/Images/parallax.jpg" alt=""></div>
+    </div>
+
+    <section class="container scrollspy" id="skills">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <h2 class="indigo-text">My skills</h2>
+                <p class="flow-text">I use the following programs in my work:</p>
+                <ul>
+                    <li>Adobe After Effects</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="row col s12 m6 l6 offset-l2">
+                <ul class="tabs row">
+                    <li class="tab col s5">
+                        <a href="#photography" class="indigo-text">Photography</a>
+                    </li>
+                    <li class="tab col s5">
+                        <a href="#motion" class="indigo-text">Motion Design</a>
+                    </li>
+                </ul>
+                <div class="col s12" id="photography">
+                    <h3 class="indigo-text">Photography</h3>
+                    <p class="">I always felt powerful when taking pictures (although I am not that good at it), the ability to stop time and capture it forever with a single click never failed to impress me and always reminded me of what humans can do given enough time, ressources and research.</p>
+                </div>
+                <div class="col s12" id="motion">
+                    <h3 class="indigo-text">Motion Design</h3>
+                    <p class="">Although the saying "Don't judge a book by its cover" might hold a very positive message, I never felt 100% convinced by it, as to me, the outside somehow reflects what's on the inside, especially when the possibility to make it shine is present.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="indigo" id="download-work">
+        <div class="container">
+            <p class="flow-text center white-text">I share with you this collection shot by me using my smartphone (oppo F9), they might not be the best out there, but I'm still proud of them as they represent a part of who I am and a reminder of every step I have ever taken to get where I am today. Feel free to use them as you want (respectfully so), no need for permission nor for mention (although it would be much appreciated) and thank you.<br>
+            <a href="./Assets/Images/Photography.zip" download class="btn orange waves-effect waves-light" id="download-button">Download</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+    </section>
+
+    <section class="section scrollspy" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <h1 class="indigo-text">Get in touch</h1>
+                    <p class="flow-text">If you are interested in hiring me, please do fill the following form with precise information as well as a description of the job and an expected duration for the project </p>
+                </div>
+
+                <form class="col s12 m12 l6">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input name="email" id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right"></span>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="message" name="message" class="materialize-textarea" data-length="500"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">schedule</i>
+                            <input id="duration" name="duration" type="text">
+                            <label for="duration">Duration</label>
+                        </div>
+
+                        <div class="input-field center col s12">
+                            <button type="submit" class="btn waves-effet indigo">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer transparent">
+        <div class="container center-align">
+            <div class="center">
+                <ul>
+                    <li><a target="_blank" class="btn-floating red darken-2 btn-large" href="mailto:jm_kouah@esi.dz"><i class="fab fa-google"></i></a></li>
+
+                    <li><a target="_blank" class="btn-floating blue darken-3 btn-large" href="https://www.facebook.com/intmoha8"><i class="fab fa-facebook-f"></i></a></li>
+
+                    <li><a target="_blank" class="btn-floating red accent-2 btn-large"href="https://kouah-mohammed-aymen-portfolio.netlify.app/"><i class="fas fa-window-maximize"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-3">
+            <div class="container center-align">
+                &copy; 2020 Kouah Mohammed Aymen
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript(Materialize) -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- App.js -->
+    <script src="./Assets/js/app.js"></script>
+</body>
+</html>
